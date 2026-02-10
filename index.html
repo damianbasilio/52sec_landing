@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <!-- Navigation -->
+    <!-- Navegacion -->
     <nav id="navbar">
         <div class="container">
             <div class="logo">52Sec</div>
@@ -35,7 +35,7 @@
         </div>
     </section>
 
-    <!-- Information -->
+    <!-- Informacion -->
     <section id="informacion">
         <div class="container">
             <h2 class="section-title fade-in">Información</h2>
@@ -144,7 +144,7 @@
         </div>
     </section>
 
-    <!-- Footer -->
+    <!-- Pie de pag -->
     <footer>
         <div class="container">
             <p>&copy; 2026 52Sec. Todos los derechos reservados.</p>
@@ -153,7 +153,7 @@
     </footer>
 
     <script>
-        // Scroll animations
+        // Animaciones al hacer scroll
         const observerOptions = {
             threshold: 0.1,
             rootMargin: '0px 0px -100px 0px'
@@ -167,12 +167,12 @@
             });
         }, observerOptions);
 
-        // Observe all animated elements
+        // Agregar animaciones a los elementos
         document.querySelectorAll('.fade-in, .slide-left, .slide-right, .scale-in').forEach(el => {
             observer.observe(el);
         });
 
-        // Navbar scroll effect
+        // Efecto al hacer scroll en la barra de navegación
         const navbar = document.getElementById('navbar');
         let lastScroll = 0;
 
@@ -188,7 +188,7 @@
             lastScroll = currentScroll;
         });
 
-        // Smooth scroll for navigation links
+        // Scroll suave para enlaces internos
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 e.preventDefault();
@@ -202,9 +202,9 @@
             });
         });
 
-        // Add stagger delay to grid items
+        // Agregar retraso a las animaciones de los logros y miembros
         document.querySelectorAll('.grid-3 .card, .grid-4 .stat-box, .grid-4 .member-card').forEach((item, index) => {
-            item.style.transitionDelay = `${index * 0.1}s`;
+            item.style.transitionDelay = `${index * 0.05}s`;
         });
     </script>
 </body>
