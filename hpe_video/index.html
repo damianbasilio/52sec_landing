@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HPE Video - 52Sec</title>
+    <title>HPE Video</title>
     <style>
         * {
             margin: 0;
@@ -11,139 +11,24 @@
             box-sizing: border-box;
         }
 
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
-            min-height: 100vh;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            padding: 20px;
-        }
-
-        .container {
-            max-width: 1200px;
-            width: 100%;
-            margin: 0 auto;
-        }
-
-        .header {
-            text-align: center;
-            margin-bottom: 30px;
-        }
-
-        .header h1 {
-            color: #00ff88;
-            font-size: 2.5rem;
-            margin-bottom: 10px;
-        }
-
-        .header a {
-            color: #888;
-            text-decoration: none;
-            font-size: 0.9rem;
-            transition: color 0.3s;
-        }
-
-        .header a:hover {
-            color: #00ff88;
-        }
-
-        .video-container {
-            position: relative;
-            width: 100%;
-            background: #000;
-            border-radius: 10px;
-            overflow: hidden;
-            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
-        }
-
-        .video-wrapper {
-            position: relative;
-            padding-bottom: 56.25%; /* 16:9 aspect ratio */
-            height: 0;
-            overflow: hidden;
-        }
-
-        .video-wrapper video {
-            position: absolute;
-            top: 0;
-            left: 0;
+        body, html {
             width: 100%;
             height: 100%;
-            object-fit: contain;
+            overflow: hidden;
         }
 
-        .no-video-message {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            color: #888;
-            text-align: center;
-            padding: 20px;
-        }
-
-        .no-video-message h2 {
-            font-size: 1.5rem;
-            margin-bottom: 10px;
-        }
-
-        .no-video-message p {
-            font-size: 1rem;
-            line-height: 1.6;
-        }
-
-        @media (max-width: 768px) {
-            .header h1 {
-                font-size: 2rem;
-            }
+        iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <div class="header">
-            <h1>HPE Video</h1>
-            <a href="../">← Volver a 52Sec</a>
-        </div>
-
-        <div class="video-container">
-            <div class="video-wrapper">
-                <!-- Opción 1: Video local (requiere Git LFS para archivos grandes) -->
-                <!--
-                <video id="videoPlayer" controls>
-                    <source src="video.mp4" type="video/mp4">
-                    Tu navegador no soporta la reproducción de video.
-                </video>
-                -->
-
-                <!-- Opción 2: YouTube embed - Reemplaza VIDEO_ID con tu ID de YouTube -->
-                <iframe 
-                    width="100%" 
-                    height="100%" 
-                    src="https://www.youtube.com/embed/pPNJFfGdtMQ" 
-                    frameborder="0" 
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-                    allowfullscreen>
-                </iframe>
-
-                <!-- Opción 3: Vimeo embed - Reemplaza VIDEO_ID con tu ID de Vimeo -->
-                <!--
-                <iframe 
-                    src="https://player.vimeo.com/video/VIDEO_ID" 
-                    width="100%" 
-                    height="100%" 
-                    frameborder="0" 
-                    allow="autoplay; fullscreen; picture-in-picture" 
-                    allowfullscreen>
-                </iframe>
-                -->
-            </div>
-        </div>
-    </div>
-
-    <!-- No se necesita JavaScript para embeds de YouTube/Vimeo -->
+    <iframe 
+        src="https://www.youtube.com/embed/pPNJFfGdtMQ" 
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+        allowfullscreen>
+    </iframe>
 </body>
 </html>
